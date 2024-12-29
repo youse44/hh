@@ -1,0 +1,185 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #00cccc;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* يتيح الانتقال إلى صف جديد على الشاشات الصغيرة */
+}
+
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; /* يسمح بالتفاف العناصر على الشاشات الصغيرة */
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+#home {
+    background: linear-gradient(
+        rgba(0, 197, 204, 0), 
+        rgba(0, 204, 187, 0.7)
+    ), url('hospital.jpg') no-repeat center center/cover;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 50px 20px;
+}
+
+#home h1 {
+    font-size: 2.5em;
+}
+
+#home p {
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+
+#home .btn {
+    background-color: #00eeff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#home .btn:hover {
+    background-color: #00b4cc;
+}
+
+/* Sections */
+section {
+    position: relative;
+    padding: 30px;
+    color: #fff;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Footer */
+footer {
+    background-color: rgb(0, 162, 255);
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+footer .contact-info p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #d3f4ff;
+}
+
+.social-buttons {
+    margin: 15px 0;
+}
+
+.social-btn {
+    display: inline-block;
+    margin: 5px 10px;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #006370;
+    background-color: #fff;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+.social-btn:hover {
+    background-color: rgb(0, 217, 255);
+    color: #fff;
+    border-color: #0078a0;
+}
+
+.copyright {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #d3f4ff;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* ترتيب العناصر عموديًا للشاشات الصغيرة */
+        align-items: flex-start;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #home h1 {
+        font-size: 2em; /* تقليل حجم النص */
+    }
+
+    #home p {
+        font-size: 1em;
+    }
+
+    footer .contact-info p {
+        font-size: 14px; /* تقليل حجم النص في الفوتر */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    #home {
+        padding: 30px 10px;
+    }
+
+    #home h1 {
+        font-size: 1.8em;
+    }
+
+    #home p {
+        font-size: 0.9em;
+    }
+
+    #home .btn {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+    footer {
+        padding: 15px 5px;
+    }
+}
